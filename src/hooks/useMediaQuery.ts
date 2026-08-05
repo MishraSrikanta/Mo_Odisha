@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 /** Subscribe to a CSS media query. Returns `false` during SSR and first paint. */
 export function useMediaQuery(query: string) {
   const [matches, setMatches] = useState(false);
-
   useEffect(() => {
     const list = window.matchMedia(query);
     setMatches(list.matches);
