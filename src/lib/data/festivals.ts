@@ -1,0 +1,275 @@
+import type { ArtForm, Festival } from "./types";
+
+export const FESTIVALS: Festival[] = [
+  {
+    id: "rath-yatra",
+    name: "Rath Yatra",
+    nameOr: "ରଥଯାତ୍ରା",
+    month: 6,
+    monthLabel: "June / July (Ashadha Shukla Dwitiya)",
+    place: "Puri",
+    blurb: "Three chariots, three kilometres, and more than a million people pulling.",
+    description:
+      "Once a year Jagannath, Balabhadra and Subhadra leave the temple and travel the Grand Road to Gundicha, their aunt's house, on chariots newly built each season from specified timber. Nandighosa, Taladhwaja and Darpadalana are assembled without a single nail; the Gajapati king sweeps the chariot platform with a golden broom before they move. Nine days later they return, and on Niladri Bije Jagannath must offer rasagola to Lakshmi before he is let back in.",
+    highlights: [
+      "Chariots rebuilt from scratch every year, without nails",
+      "Chhera Pahanra — the king sweeps the platform",
+      "Nine days at the Gundicha temple",
+      "Niladri Bije and the rasagola offering",
+    ],
+    motif: "wheel",
+  },
+  {
+    id: "bali-yatra",
+    name: "Bali Yatra",
+    nameOr: "ବାଲିଯାତ୍ରା",
+    month: 11,
+    monthLabel: "November (Kartika Purnima)",
+    place: "Cuttack, on the Mahanadi",
+    blurb: "A voyage to Bali, remembered on the riverbank with paper boats and a vast fair.",
+    description:
+      "On Kartika Purnima, Odias float small boats of paper, banana bark and cork on rivers and tanks at first light, chanting 'aa ka ma boi' — a remembrance of the day merchants sailed for Bali, Java and Sumatra. In Cuttack the observance has grown into one of Asia's largest open fairs, spreading for kilometres along the Mahanadi with handloom, filigree, food and a full week of performance.",
+    highlights: [
+      "Boita Bandana — floating boats at dawn",
+      "Commemorates the sadhaba maritime trade",
+      "One of the largest trade fairs in Asia",
+      "Cuttack filigree and handloom on full display",
+    ],
+    motif: "wave",
+  },
+  {
+    id: "nuakhai",
+    name: "Nuakhai",
+    nameOr: "ନୂଆଖାଇ",
+    month: 9,
+    monthLabel: "August / September (Bhadraba Shukla Panchami)",
+    place: "Western Odisha",
+    blurb: "The first rice of the season, offered to the goddess before anyone eats.",
+    description:
+      "Nuakhai Bhetghat is the agrarian new year of western Odisha. The nua anna — the season's first harvested rice — is offered to the household deity and to Samaleswari at Sambalpur at an astrologically fixed hour, after which the family eats together, youngest greeting eldest. The evening belongs to Dalkhai, Rasarkeli and Sambalpuri song, danced in courtyards across Sambalpur, Bargarh, Bolangir, Kalahandi and Sundargarh.",
+    highlights: [
+      "Offering of nua anna at a fixed lagna",
+      "Nuakhai Bhetghat — the family greeting",
+      "Dalkhai and Rasarkeli through the night",
+      "The defining festival of the Sambalpuri west",
+    ],
+    motif: "loom",
+  },
+  {
+    id: "raja",
+    name: "Raja Parba",
+    nameOr: "ରଜ ପର୍ବ",
+    month: 6,
+    monthLabel: "Mid-June (three days from Mithuna Sankranti)",
+    place: "Statewide",
+    blurb: "Three days when the earth rests, no one ploughs, and every tree grows a swing.",
+    description:
+      "Raja celebrates the earth's menstruation and coming fertility ahead of the monsoon. For three days no ploughing, digging or sowing is done; unmarried women wear new saree and alata, avoid walking barefoot, and spend the days on rope swings hung from mango and banyan trees, singing Raja songs. Poda pitha is baked, and on the fourth day Vasumati Snana bathes the grinding stone as a stand-in for the earth herself.",
+    highlights: [
+      "Three days without ploughing or digging",
+      "Doli and rasi swings hung in every village",
+      "Poda pitha and a house full of sweets",
+      "Vasumati Snana on the closing day",
+    ],
+    motif: "lotus",
+  },
+  {
+    id: "boita-bandana",
+    name: "Boita Bandana",
+    nameOr: "ବୋଇତ ବନ୍ଦାଣ",
+    month: 11,
+    monthLabel: "November (Kartika Purnima, at dawn)",
+    place: "Rivers and tanks statewide",
+    blurb: "The household half of Bali Yatra — miniature boats set adrift at first light.",
+    description:
+      "Before sunrise on Kartika Purnima, families take small boats made of banana bark, paper or cork, load them with a lamp, betel nut and coin, and set them on water while chanting 'aa ka ma boi, pana gua thoi'. It is one of the oldest continuously observed maritime memories anywhere — a trading calendar preserved as a domestic ritual for close to two thousand years.",
+    highlights: [
+      "Observed at dawn, before any other rite",
+      "Boats of banana bark, paper and cork",
+      "Lamp, betel nut and coin as cargo",
+      "Kept alive continuously for ~2,000 years",
+    ],
+    motif: "wave",
+  },
+  {
+    id: "durga-puja-cuttack",
+    name: "Cuttack Durga Puja",
+    nameOr: "କଟକ ଦୁର୍ଗା ପୂଜା",
+    month: 10,
+    monthLabel: "September / October (Ashwina)",
+    place: "Cuttack",
+    blurb: "Backdrops built from kilograms of silver filigree, one pandal trying to outdo the next.",
+    description:
+      "Cuttack's puja is distinguished by the chandi medha — an enormous backdrop of silver, and in some pandals gold, worked in tarakasi filigree by the city's own artisans over months. Some medhas carry well over a hundred kilograms of silver and are stored and reused for decades. The immersion procession along the Mahanadi closes the festival.",
+    highlights: [
+      "Chandi medha in Cuttack silver filigree",
+      "Some backdrops over a century old",
+      "Months of artisan work per pandal",
+      "Immersion procession on the Mahanadi",
+    ],
+    motif: "flame",
+  },
+  {
+    id: "konark-festival",
+    name: "Konark Dance Festival",
+    nameOr: "କୋଣାର୍କ ନୃତ୍ୟ ମହୋତ୍ସବ",
+    month: 12,
+    monthLabel: "1 – 5 December",
+    place: "Konark",
+    blurb: "Classical dance performed in the open air against the Sun Temple.",
+    description:
+      "For five nights each December an open-air stage is set beside the Sun Temple and dancers from across India perform Odissi, Bharatanatyam, Kathak, Kuchipudi, Manipuri and Chhau against the lit facade. The adjoining international sand art festival on Chandrabhaga beach runs at the same time.",
+    highlights: [
+      "Five nights beside the lit Sun Temple",
+      "All major Indian classical forms represented",
+      "International Sand Art Festival alongside",
+      "Chandrabhaga beach at Konark"
+    ],
+    motif: "wheel",
+  },
+  {
+    id: "chaitra-parva",
+    name: "Chaitra Parva",
+    nameOr: "ଚୈତ୍ର ପର୍ବ",
+    month: 4,
+    monthLabel: "Mid-April",
+    place: "Baripada, Mayurbhanj",
+    blurb: "Thirteen days of Chhau, danced by rival village akhadas.",
+    description:
+      "The climax of the Mayurbhanj Chhau year, Chaitra Parva pits the two traditional akhadas — Uttar Sahi and Dakhin Sahi — against each other in a competitive display that draws dancers back to Baripada from wherever they now live. The martial vocabulary is at its most explosive here, performed without masks and to a wall of dhol, dhumsa and mohuri.",
+    highlights: [
+      "Uttar Sahi versus Dakhin Sahi akhadas",
+      "Thirteen days culminating on Chaitra Sankranti",
+      "Maskless Mayurbhanj style at full intensity",
+      "Dhol, dhumsa and mohuri ensemble",
+    ],
+    motif: "flame",
+  },
+  {
+    id: "dhanu-yatra",
+    name: "Dhanu Yatra",
+    nameOr: "ଧନୁ ଯାତ୍ରା",
+    month: 1,
+    monthLabel: "December / January (eleven days)",
+    place: "Bargarh",
+    blurb: "The world's largest open-air theatre — an entire town becomes the stage.",
+    description:
+      "For eleven days Bargarh town becomes Mathura, the Jira river becomes the Yamuna, and the village of Ambapali across it becomes Gopapura. A performer plays Kansa and rules the town in character: he can summon officials, levy fines and interrupt proceedings, and the administration plays along. There is no ticketed venue — the whole settlement is the set.",
+    highlights: [
+      "Eleven days, entire town as the stage",
+      "Kansa rules Bargarh in character",
+      "Jira river cast as the Yamuna",
+      "Running since 1947-48",
+    ],
+    motif: "flame",
+  },
+  {
+    id: "magha-saptami",
+    name: "Magha Saptami",
+    nameOr: "ମାଘ ସପ୍ତମୀ",
+    month: 2,
+    monthLabel: "January / February",
+    place: "Chandrabhaga, Konark",
+    blurb: "A pre-dawn sea bath at the old Sun temple site, for the sun's arrival.",
+    description:
+      "Pilgrims gather at Chandrabhaga beach near Konark before first light and bathe as the sun rises over the water, a rite connected to the sun worship the temple was built for. Tens of thousands come; the fair that accompanies it fills the road from Konark to the sea.",
+    highlights: [
+      "Sea bath at sunrise on Magha Shukla Saptami",
+      "Chandrabhaga beach, beside Konark",
+      "Continues the Sun Temple's original cult",
+      "Accompanying fair along the Konark road",
+    ],
+    motif: "wheel",
+  },
+];
+
+export const ART_FORMS: ArtForm[] = [
+  {
+    id: "pattachitra-art",
+    name: "Pattachitra",
+    nameOr: "ପଟ୍ଟଚିତ୍ର",
+    medium: "Natural pigment on treated cloth",
+    origin: "Raghurajpur, Puri",
+    blurb: "Densely bordered scroll painting with no empty ground left anywhere on the surface.",
+    description:
+      "The chitrakara prepares the patta, draws freehand without pencil, fills colour before outlining, and finishes with a lacquer of tree resin. Line is everything: the final black outline is drawn in one continuous movement with a brush made from mouse or squirrel hair.",
+    motif: "lotus",
+  },
+  {
+    id: "palm-leaf",
+    name: "Talapatrachitra",
+    nameOr: "ତାଳପତ୍ର ଚିତ୍ର",
+    medium: "Iron stylus on cured palm leaf",
+    origin: "Puri, Ganjam",
+    blurb: "Etched, not drawn — the line is cut into the leaf and rubbed with soot.",
+    description:
+      "Palm leaves are cured, cut to size and stitched into folding panels. The artist incises the image with a sharp stylus and rubs charcoal or turmeric into the cuts to bring it out. The same technique carried Odia literature for a thousand years, which is why the script is round: a straight line would split the leaf.",
+    motif: "loom",
+  },
+  {
+    id: "stone-carving",
+    name: "Stone carving",
+    nameOr: "ପଥର ଖୋଦେଇ",
+    medium: "Khondalite, chlorite, laterite",
+    origin: "Lalitgiri, Puri, Bhubaneswar",
+    blurb: "An unbroken line of sculptors from Konark's builders to today's workshops.",
+    description:
+      "The families who carved the temples never stopped. Workshops around Puri, Lalitgiri and Bhubaneswar still cut khondalite and chlorite by hand, supplying temple restoration work as well as contemporary commissions, and training apprentices in the same measured proportions used by the Ganga-era silpins.",
+    motif: "temple",
+  },
+  {
+    id: "applique-art",
+    name: "Pipili appliqué",
+    nameOr: "ପିପିଲି ଚାନ୍ଦୁଆ",
+    medium: "Cut and stitched dyed cotton",
+    origin: "Pipili, Puri",
+    blurb: "Flat, bold shapes in four colours, made first for chariots and canopies.",
+    description:
+      "Chandua work is cut from dyed cotton and appliquéd onto a contrasting ground in strong silhouettes — elephant, parrot, lotus, sun. Its ritual function still governs the vocabulary: everything made here descends from the covers and umbrellas required by the Rath Yatra.",
+    motif: "flame",
+  },
+  {
+    id: "dhokra",
+    name: "Dhokra metal casting",
+    nameOr: "ଢୋକରା",
+    medium: "Lost-wax bell metal casting",
+    origin: "Dhenkanal, Mayurbhanj, Sundargarh",
+    blurb: "Four thousand years old, and each piece is necessarily unique.",
+    description:
+      "A clay core is wrapped in fine wax threads, coated in clay, and fired so the wax runs out and molten bell metal takes its place. Because the mould must be broken to release the casting, no two Dhokra pieces are ever identical. The technique is among the oldest continuously practised metalworking methods in the world.",
+    motif: "flame",
+  },
+  {
+    id: "handloom",
+    name: "Handloom weaving",
+    nameOr: "ହସ୍ତତନ୍ତ",
+    medium: "Cotton, tussar and mulberry silk",
+    origin: "Bargarh, Sonepur, Berhampur, Kotpad, Nuapatna",
+    blurb: "Bandha, Bomkai, Kotpad, Berhampuri, Khandua — five traditions, one loom culture.",
+    description:
+      "Odisha's weaving belts each guard a distinct technique: bandha ikat in the west, extra-weft Bomkai in Ganjam, madder-dyed Kotpad in Koraput, Berhampuri phoda kumbha silk, and Nuapatna's Khandua, woven with verses of the Gita Govinda for the Jagannath temple.",
+    motif: "loom",
+  },
+  {
+    id: "silver-filigree-art",
+    name: "Tarakasi filigree",
+    nameOr: "ତାରକସି",
+    medium: "Drawn silver wire",
+    origin: "Cuttack",
+    blurb: "Wire finer than thread, coiled into panels that look like frozen lace.",
+    description:
+      "Silver is drawn down through successive dies until it is finer than sewing thread, then flattened, coiled into scrolls and soldered into frames. A single Durga Puja medha can take a workshop most of a year and carry over a hundred kilograms of silver.",
+    motif: "lotus",
+  },
+  {
+    id: "sand-art",
+    name: "Sand sculpture",
+    nameOr: "ବାଲୁକା ଶିଳ୍ପ",
+    medium: "Beach sand and sea water",
+    origin: "Puri, Konark",
+    blurb: "A young tradition that has made Odisha internationally known.",
+    description:
+      "Sand sculpture at Puri grew from a local practice into a recognised art form through artists such as Sudarsan Pattnaik, whose works on the beach address festivals, current events and conservation. The International Sand Art Festival at Chandrabhaga each December now draws sculptors from across the world.",
+    motif: "wave",
+  },
+];

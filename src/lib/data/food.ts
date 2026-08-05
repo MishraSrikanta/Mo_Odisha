@@ -1,0 +1,148 @@
+import type { Dish } from "./types";
+
+export const DISHES: Dish[] = [
+  {
+    id: "pakhala",
+    name: "Pakhala Bhata",
+    nameOr: "ପଖାଳ ଭାତ",
+    kind: "staple",
+    blurb: "Rice fermented overnight in water — Odisha's answer to a summer afternoon.",
+    description:
+      "Cooked rice is covered with water and left to ferment gently overnight, producing a mildly sour, cooling dish that has kept field workers going through Odia summers for centuries. It is eaten by hand from a wide bowl, the water drunk at the end. There is a whole grammar of it — saja pakhala fresh, basi pakhala aged, dahi pakhala with curd — and 20 March is observed as Pakhala Dibasa.",
+    ingredients: ["Rice", "Water", "Curd (optional)", "Ginger", "Curry leaf", "Salt"],
+    servedWith: "Badi chura, fried fish, saga bhaja, aloo bharta",
+    region: "Statewide",
+  },
+  {
+    id: "dalma",
+    name: "Dalma",
+    nameOr: "ଡାଲମା",
+    kind: "curry",
+    blurb: "Lentils cooked with vegetables — no onion, no garlic, finished with roasted spice.",
+    description:
+      "Dalma is the everyday centre of the Odia meal and a temple offering at the same time. Toor dal is boiled with raw banana, pumpkin, papaya, brinjal and arbi, then tempered with cumin, dried chilli and panch phutana, and finished with a spoon of roasted, ground spice and a little ghee. Because it is satvik it appears in the mahaprasad, and because it is easy it appears on Tuesday nights in every household.",
+    ingredients: ["Toor dal", "Raw banana", "Pumpkin", "Brinjal", "Panch phutana", "Ghee"],
+    servedWith: "Steamed rice, a squeeze of lime",
+    region: "Statewide",
+  },
+  {
+    id: "chhena-poda",
+    name: "Chhena Poda",
+    nameOr: "ଛେନାପୋଡ଼",
+    kind: "sweet",
+    blurb: "Burnt cheese cake — invented, the story goes, by accident.",
+    description:
+      "Fresh chhena is kneaded with sugar and semolina, poured into a mould lined with sal leaf, and baked slowly over a low fire until the sugar caramelises to near-black on top and the interior sets custard-soft. Credit usually goes to Sudarsan Sahoo of Nayagarh in the 1920s, who is said to have left a batch of sweetened chhena in a cooling oven overnight. It received a GI tag in 2025.",
+    ingredients: ["Chhena (fresh cheese)", "Sugar", "Semolina", "Cardamom", "Cashew", "Ghee"],
+    servedWith: "Eaten warm, on its own",
+    region: "Nayagarh, statewide",
+  },
+  {
+    id: "rasagola",
+    name: "Odisha Rasagola",
+    nameOr: "ରସଗୋଲା",
+    kind: "sweet",
+    blurb: "Softer, darker and less spherical than its neighbour — and offered to a goddess first.",
+    description:
+      "The Pahala rasagola, made along the Bhubaneswar–Cuttack road, is cooked longer in the syrup, which gives it a beige tint and a more yielding texture. Its ritual home is the Niladri Bije rite at Puri, when Jagannath returns from the Rath Yatra and offers rasagola to Lakshmi to appease her for having left without telling her. Odisha received a GI tag for it in 2019; the state observes Rasagola Dibasa on Niladri Bije.",
+    ingredients: ["Chhena", "Sugar syrup", "Cardamom", "Semolina"],
+    servedWith: "Warm, straight from the syrup",
+    region: "Pahala, Salepur, Puri",
+  },
+  {
+    id: "santula",
+    name: "Santula",
+    nameOr: "ସାନ୍ତୁଳା",
+    kind: "curry",
+    blurb: "Mixed vegetables, barely spiced, cooked until they give up their own sweetness.",
+    description:
+      "Santula is the quiet counterpoint to dalma: vegetables — papaya, potato, brinjal, tomato, ridge gourd — steamed or lightly fried with panch phutana, green chilli and a little milk, with almost no masala. It is what Odia cooking does best, which is to get out of the ingredient's way.",
+    ingredients: ["Papaya", "Potato", "Brinjal", "Ridge gourd", "Panch phutana", "Milk"],
+    servedWith: "Rice and dal",
+    region: "Statewide",
+  },
+  {
+    id: "macha-besara",
+    name: "Macha Besara",
+    nameOr: "ମାଛ ବେସର",
+    kind: "curry",
+    blurb: "Fish in a ground mustard gravy — the coastal kitchen's signature.",
+    description:
+      "Besara is a paste of mustard seed ground with garlic and green chilli, and it gives this curry its pungent lift. Rohu or catla is fried first, then simmered in the paste with turmeric and tomato. The same treatment is applied to prawns and to vegetables in the vegetarian version, but the fish is the point.",
+    ingredients: ["Rohu or catla", "Mustard seed paste", "Turmeric", "Garlic", "Green chilli", "Mustard oil"],
+    servedWith: "Steamed rice",
+    region: "Coastal districts",
+  },
+  {
+    id: "chungdi-malai",
+    name: "Chungdi Malai",
+    nameOr: "ଚିଙ୍ଗୁଡ଼ି ମଲାଇ",
+    kind: "curry",
+    blurb: "Chilika prawns in coconut milk — the state's most quietly luxurious dish.",
+    description:
+      "Prawns from the Chilika lagoon are cooked in a gravy of coconut milk with onion, ginger, a restrained garam masala and a pinch of sugar. It is richer than most Odia food and usually reserved for guests, weddings and festival lunches.",
+    ingredients: ["Prawns", "Coconut milk", "Onion", "Ginger", "Garam masala", "Ghee"],
+    servedWith: "Ghee rice or pulao",
+    region: "Chilika, Puri, Ganjam",
+  },
+  {
+    id: "abadha",
+    name: "Mahaprasad Abadha",
+    nameOr: "ମହାପ୍ରସାଦ ଅବଢ଼ା",
+    kind: "prasad",
+    blurb: "Fifty-six offerings cooked in earthen pots in the temple kitchen at Puri.",
+    description:
+      "The chappan bhog — fifty-six items across rice preparations, dals, vegetables, sweets and cakes — is cooked daily in the Rosaghara without onion, garlic or any tasting beforehand. Once offered, it becomes mahaprasad, and by long convention caste distinctions do not apply to those eating it together in the Ananda Bazar. Common items include kanika sweet rice, dalma, khechedi, saga bhaja and khaja.",
+    ingredients: ["Rice", "Dal", "Seasonal vegetables", "Jaggery", "Ghee", "Coconut"],
+    servedWith: "Eaten seated together in the Ananda Bazar",
+    region: "Puri",
+  },
+  {
+    id: "chakuli",
+    name: "Chakuli Pitha",
+    nameOr: "ଚକୁଳି ପିଠା",
+    kind: "snack",
+    blurb: "A soft fermented rice pancake, the everyday member of a large pitha family.",
+    description:
+      "Rice and black gram are soaked, ground and left to ferment, then poured onto a hot tawa to make a thick, soft pancake. Odisha has an unusually deep pitha repertoire — poda pitha baked slowly overnight, arisa fried in ghee, manda steamed, enduri wrapped in turmeric leaf for the Prathamastami festival — and chakuli is the one that turns up at breakfast.",
+    ingredients: ["Rice", "Black gram", "Salt", "Oil"],
+    servedWith: "Ghuguni, mutton curry, or jaggery",
+    region: "Statewide",
+  },
+  {
+    id: "dahibara-aludum",
+    name: "Dahibara Aludum",
+    nameOr: "ଦହିବରା ଆଳୁଦମ",
+    kind: "snack",
+    blurb: "Cuttack's street breakfast: soaked lentil dumplings under spiced potato curry.",
+    description:
+      "Fried urad dal vadas are soaked in thin spiced water until they collapse into softness, then topped with a hot potato curry, ghuguni, chopped onion, sev and coriander. Cuttack argues about which cart makes it best with the seriousness other cities reserve for politics.",
+    ingredients: ["Urad dal vada", "Curd", "Potato curry", "Ghuguni", "Sev", "Coriander"],
+    servedWith: "Eaten standing, from a leaf bowl",
+    region: "Cuttack",
+  },
+  {
+    id: "khaja",
+    name: "Khaja",
+    nameOr: "ଖଜା",
+    kind: "sweet",
+    blurb: "Layered, folded, deep-fried and soaked in syrup — a temple offering that travels well.",
+    description:
+      "Sheets of wheat dough are layered with ghee, rolled, cut and fried so that they open into visible flakes, then dipped in sugar syrup. Khaja from Puri is part of the mahaprasad, and its sturdiness is the reason pilgrims have carried it home for centuries. Kakatpur and Nimapada are the other well-known sources.",
+    ingredients: ["Wheat flour", "Ghee", "Sugar", "Cardamom"],
+    servedWith: "Eaten dry, keeps for days",
+    region: "Puri, Kakatpur",
+  },
+  {
+    id: "badi-chura",
+    name: "Badi Chura",
+    nameOr: "ବଡ଼ି ଚୁରା",
+    kind: "snack",
+    blurb: "Fried sun-dried lentil nuggets crushed with garlic, chilli and mustard oil.",
+    description:
+      "Badi are made in summer — a paste of black gram and ash gourd dropped in small mounds onto a cloth and dried in the sun for days, then stored all year. Fried and crushed with raw garlic, green chilli, salt and mustard oil, they become the sharp, pungent accompaniment that makes pakhala complete.",
+    ingredients: ["Sun-dried badi", "Garlic", "Green chilli", "Mustard oil", "Salt"],
+    servedWith: "Pakhala, or plain rice",
+    region: "Statewide",
+  },
+];

@@ -1,0 +1,221 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Mo Odisha — Design System
+   Palette drawn from Odisha itself: the Bay of Bengal, temple
+   sandstone, Konark gold, sal forests and Cuttack copper.
+   ============================================================ */
+
+@theme {
+  --color-deep: #071a34;
+  --color-deep-2: #0d2a52;
+  --color-sand: #d9b08c;
+  --color-sand-2: #c08b5c;
+  --color-gold: #e8b33d;
+  --color-gold-2: #f5d67a;
+  --color-forest: #1f5f4a;
+  --color-forest-2: #2f8a63;
+  --color-copper: #b06a3b;
+  --color-saffron: #f08a3c;
+
+  --font-display: var(--font-display), "Cormorant Garamond", serif;
+  --font-body: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-odia: var(--font-odia), "Noto Sans Oriya", "Kalinga", sans-serif;
+
+  --ease-silk: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root {
+  color-scheme: dark;
+
+  --bg: #050e1e;
+  --bg-elev: #0a1a30;
+  --fg: #f3ece2;
+  --fg-muted: #a9b6c8;
+  --line: rgb(255 255 255 / 0.1);
+  --glass: rgb(255 255 255 / 0.05);
+  --glass-strong: rgb(255 255 255 / 0.09);
+  --halo: rgb(232 179 61 / 0.28);
+  --shadow: 0 24px 60px -20px rgb(0 0 0 / 0.75);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #fbf6ee;
+  --bg-elev: #fffdf9;
+  --fg: #1b2434;
+  --fg-muted: #59667a;
+  --line: rgb(7 26 52 / 0.12);
+  --glass: rgb(255 255 255 / 0.6);
+  --glass-strong: rgb(255 255 255 / 0.82);
+  --halo: rgb(176 106 59 / 0.22);
+  --shadow: 0 24px 60px -26px rgb(27 36 52 / 0.28);
+}
+
+@layer base {
+  * {
+    border-color: var(--line);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Ambient page wash — sits behind everything, theme aware. */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(60rem 40rem at 12% -10%, var(--halo), transparent 60%),
+      radial-gradient(50rem 40rem at 90% 8%, rgb(47 138 99 / 0.16), transparent 62%),
+      radial-gradient(70rem 50rem at 50% 110%, rgb(13 42 82 / 0.35), transparent 65%);
+  }
+
+  :root[data-theme="light"] body::before {
+    background:
+      radial-gradient(60rem 40rem at 12% -10%, var(--halo), transparent 60%),
+      radial-gradient(50rem 40rem at 90% 8%, rgb(31 95 74 / 0.1), transparent 62%),
+      radial-gradient(70rem 50rem at 50% 110%, rgb(217 176 140 / 0.35), transparent 65%);
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: #071a34;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb {
+    background: color-mix(in oklab, var(--color-gold) 45%, transparent);
+    border-radius: 99px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+  }
+}
+
+@layer utilities {
+  .font-odia {
+    font-family: var(--font-odia);
+  }
+
+  .glass {
+    background: var(--glass);
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    border: 1px solid var(--line);
+  }
+
+  .glass-strong {
+    background: var(--glass-strong);
+    backdrop-filter: blur(24px) saturate(160%);
+    -webkit-backdrop-filter: blur(24px) saturate(160%);
+    border: 1px solid var(--line);
+  }
+
+  .text-muted {
+    color: var(--fg-muted);
+  }
+
+  .gold-text {
+    background: linear-gradient(100deg, var(--color-gold-2), var(--color-gold) 42%, var(--color-copper));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .rule-gold {
+    background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow);
+  }
+
+  /* Kalinga-style corner glow revealed on card hover. */
+  .ornament::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    background: radial-gradient(
+      circle at 100% 0%,
+      color-mix(in oklab, var(--color-gold) 22%, transparent),
+      transparent 34%
+    );
+    opacity: 0;
+    transition: opacity 0.5s var(--ease-silk);
+  }
+
+  .group:hover .ornament::after {
+    opacity: 1;
+  }
+
+  .grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.3;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  }
+
+  .marquee-track {
+    animation: marquee 42s linear infinite;
+  }
+
+  .float-slow {
+    animation: float-slow 7s ease-in-out infinite;
+  }
+}
+
+@keyframes marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -14px, 0); }
+}
+
+/* Honour the user's motion preference everywhere. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
